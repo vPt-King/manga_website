@@ -9,8 +9,8 @@ fetch("http://localhost:3000/")
             let html = `<li class="manga">
             <a href="#">
                 <img src="${data.img}" alt="">
-                <p>${data.name}</p>
-                <p>Chương: ${data.chapter}</p>
+                <h3>${data.name}</h3>
+                <h3>Chương: ${data.chapter}</h3>
             </a>
         </li>`;
         showManga.innerHTML += html;

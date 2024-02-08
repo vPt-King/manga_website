@@ -1,7 +1,7 @@
 .container{
     margin-top: 50px;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .container .option{
@@ -29,7 +29,8 @@
 .container .list_manga .manga{
     list-style: none;
     width: 250px;
-    height: 500px;
+    height: 430px;
+    border-radius: 2px;
 }
 
 .title_top .dropbtn {
@@ -90,6 +91,20 @@
 .container .list_manga li a{
     text-decoration: none;
     color: black;
+}
+
+.container .list_manga li a h3{
+    color:#363636;
+}
+
+.container .list_manga li a img{
+    border-radius: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.5);
+    transition: all 0.4s;
+}
+
+.container .list_manga li a:hover img{
+    transform: scale(1.09);
 }
 
 /* moble */
