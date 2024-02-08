@@ -3,7 +3,13 @@ const app = express()
 const port = 3000
 const dataFile = './data.json';
 const fs = require('fs'); // Import the file system module
-
+const cors=require("cors");
+const corsOptions ={
+   origin:'http://127.0.0.1:5500', 
+   credentials:true,            //access-control-allow-credentials:true
+   optionSuccessStatus:200,
+}
+app.use(cors(corsOptions)) // Use this after the variable declaration
 function readData(){
     try {
         const data = fs.readFileSync(dataFile, 'utf8'); // Read file synchronously

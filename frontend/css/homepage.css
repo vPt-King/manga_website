@@ -1,7 +1,11 @@
 .container{
     margin-top: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.container .option{
+    margin-bottom: 50px;
 }
 
 .container .option .default_options h2{
@@ -20,6 +24,12 @@
     margin-top: 20px;
     font-weight: 100px;
     color: #88807B;
+}
+
+.container .list_manga .manga{
+    list-style: none;
+    width: 250px;
+    height: 500px;
 }
 
 .title_top .dropbtn {
@@ -67,6 +77,19 @@
   /* Change the background color of the dropdown button when the dropdown content is shown */
 .title_top .dropdown:hover .dropbtn {
     background-color: #48494B;
+}
+
+
+.container .list_manga{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 8px;
+}
+
+.container .list_manga li a{
+    text-decoration: none;
+    color: black;
 }
 
 /* moble */
