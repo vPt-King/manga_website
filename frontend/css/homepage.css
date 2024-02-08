@@ -16,7 +16,6 @@
 }
 
 
-
 .container .option .title_top{
     margin-top: 20px;
     font-weight: 100px;
@@ -68,5 +67,15 @@
   /* Change the background color of the dropdown button when the dropdown content is shown */
 .title_top .dropdown:hover .dropbtn {
     background-color: #48494B;
-  }
-  
+}
+
+/* moble */
+@media only screen and (max-width: 739px) {
+    
+    .container{
+        margin-top: 50px;   
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+}
