@@ -1,310 +1,372 @@
 {
     "manga_1": {
+        "id":"1",
         "name": "Hội Pháp Sư anh hùng thành phố",
         "chapter": "36",
         "img": "https://st.nettruyenss.com/data/comics/108/fairy-tail-city-hero.jpg"
     },
     "manga_2": {
+        "id":"2",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_3": {
+        "id":"3",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_4": {
+        "id":"4",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_5": {
+        "id":"5",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_6": {
+        "id":"6",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_7": {
+        "id":"7",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_8": {
+        "id":"8",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_9": {
+        "id":"9",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_10": {
+        "id":"10",
+        "name": "Càng Đánh Càng Mạnh",
+        "chapter": "37",
+        "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
+    },
+    "manga_11": {
+        "id":"11",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_12": {
+        "id":"12",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_13": {
+        "id":"13",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_14": {
+        "id":"14",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_15": {
+        "id":"15",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_16": {
-        "name": "Càng Đánh Càng Mạnh",
-        "chapter": "37",
-        "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
-    },
-    "manga_17": {
+        "id":"16",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_18": {
+        "id":"17",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_19": {
+        "id":"18",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_20": {
+        "id":"19",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_21": {
+        "id":"20",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_22": {
+        "id":"21",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_23": {
+        "id":"22",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_24": {
+        "id":"23",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_25": {
+        "id":"24",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_26": {
+        "id":"25",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_27": {
+        "id":"26",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_28": {
+        "id":"27",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_29": {
+        "id":"28",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_30": {
+        "id":"29",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_31": {
+        "id":"30",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_32": {
+        "id":"31",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_33": {
+        "id":"32",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_34": {
+        "id":"33",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_35": {
+        "id":"34",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_36": {
+        "id":"35",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_37": {
+        "id":"36",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_38": {
+        "id":"37",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_39": {
+        "id":"38",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_40": {
+        "id":"39",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_41": {
+        "id":"40",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_42": {
+        "id":"41",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_43": {
+        "id":"42",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_44": {
+        "id":"43",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_45": {
+        "id":"44",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_46": {
+        "id":"45",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_47": {
+        "id":"46",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_48": {
+        "id":"47",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_49": {
+        "id":"48",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_50": {
+        "id":"49",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_51": {
+        "id":"50",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_52": {
+        "id":"51",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_53": {
+        "id":"52",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_54": {
+        "id":"53",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_55": {
+        "id":"54",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_56": {
+        "id":"55",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_57": {
+        "id":"56",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_58": {
+        "id":"57",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_59": {
+        "id":"58",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_60": {
+        "id":"59",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_61": {
+        "id":"60",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_62": {
+        "id":"61",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
     },
     "manga_63": {
+        "id":"62",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
