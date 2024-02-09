@@ -1,0 +1,19 @@
+.list_page{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.list_page li{
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin: 5px;
+    border: 1px solid #dddddd;
+    cursor: pointer;
+}
+
+.list_page li:hover{
+    background-color: #e1e2e4;
+    color: #63C5DA;
+}

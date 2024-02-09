@@ -1,10 +1,11 @@
-fetch("http://localhost:3000/")
+fetch("http://localhost:3000/?page=1")
     .then(function(response){
         return response.json();
     })
     .then(function(data){
         let showManga = document.getElementById("list_manga_detail");
         listData = Object.values(data);
+        console.log(listData);
         listData.forEach(data => {
             let html = `<li class="manga">
             <a href="#">

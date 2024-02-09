@@ -9,6 +9,15 @@ const corsOptions ={
    credentials:true,            //access-control-allow-credentials:true
    optionSuccessStatus:200,
 }
+
+function numberOfPage(so) {
+  let ketQua = so / 25;
+  if (Number.isInteger(ketQua)) {
+    return ketQua;
+  } else {
+    return Math.ceil(ketQua);
+  }
+}
 app.use(cors(corsOptions)) // Use this after the variable declaration
 function readData(){
     try {
@@ -18,9 +27,15 @@ function readData(){
         console.error('Error reading data.json:', error);
       }
 } 
+
+// cần trả về số trang, số lượng trang từ đâu đến đâu, query số lượng truyện từ đâu đến đâu
 app.get('/', (req, res) => {
-    data = readData();
-    res.send(data);
+    const page = parseInt(req.query.page);
+    lastIdManga= page*25;
+    firstIdManaga = lastIdManga - 24;
+    mangas = Object.values(JSON.parse(readData()));
+    const filteredMangas = mangas.filter(manga => parseInt(manga.id) >= firstIdManaga && parseInt(manga.id) <= lastIdManga);
+    res.send(JSON.stringify(filteredMangas));
 })
 
 app.listen(port, () => {
