@@ -10,8 +10,8 @@ const corsOptions ={
    optionSuccessStatus:200,
 }
 
-function numberOfPage(so) {
-  let ketQua = so / 25;
+function numberOfPage(numberOfManga) {
+  let ketQua = numberOfManga / 25;
   if (Number.isInteger(ketQua)) {
     return ketQua;
   } else {
@@ -34,8 +34,13 @@ app.get('/', (req, res) => {
     lastIdManga= page*25;
     firstIdManaga = lastIdManga - 24;
     mangas = Object.values(JSON.parse(readData()));
+    pageNumber = numberOfPage(mangas.length);
     const filteredMangas = mangas.filter(manga => parseInt(manga.id) >= firstIdManaga && parseInt(manga.id) <= lastIdManga);
-    res.send(JSON.stringify(filteredMangas));
+    returnedData = {
+      numberOfPage: pageNumber,
+      mangas: filteredMangas
+    }
+    res.send(JSON.stringify(returnedData));
 })
 
 app.listen(port, () => {
