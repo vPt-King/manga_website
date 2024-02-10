@@ -1,10 +1,9 @@
-// fetch manga and paginate when user browse the first time
-fetch("http://localhost:3000/?page=1")
+function fetchMangaAndLoadPaginateRelated(mangaElement, paginateElement,url){
+    fetch(url)
     .then(function(response){
         return response.json();
     })
     .then(function(data){
-        let showManga = document.getElementById("list_manga_detail");
         returnedData = Object.values(data);
         let numberOfPage = parseInt(returnedData[0]);
         let listData = returnedData[1];
@@ -16,18 +15,19 @@ fetch("http://localhost:3000/?page=1")
                 <h3>Chương: ${data.chapter}</h3>
             </a>
         </li>`;
-        showManga.innerHTML += html;
+        mangaElement.innerHTML += html;
         });
 
-        let paginatePage = document.getElementById("paginate_show");
+       
         for(let i = 1; i <= numberOfPage;i++)
         {
-            let htmlString = ` <li class="list_page_detail" onclick="myFunction(event)">
+            let htmlString = ` <li class="list_page_detail" onclick="catchOnclickPageAndSwitch(event)">
             ${i}
             </li>`;
-            paginatePage.innerHTML += htmlString;
+            paginateElement.innerHTML += htmlString;
         }
     })
     .catch(function(error){
         console.log(error);
     })
+}
