@@ -18,14 +18,26 @@ function fetchMangaAndLoadPaginateRelated(mangaElement, paginateElement,url){
         mangaElement.innerHTML += html;
         });
 
-       
+        //get page number from url, if page == i then that is the current page, we hightligt the 
+        // current page by background color 
+        const page = parseInt(url.split("=")[1]);
         for(let i = 1; i <= numberOfPage;i++)
         {
-            let htmlString = ` <li class="list_page_detail" onclick="catchOnclickPageAndSwitch(event)">
+            let htmlString = '';
+            if(page != i){
+            htmlString = ` <li class="list_page_detail" onclick="catchOnclickPageAndSwitch(event)">
             ${i}
             </li>`;
+            }
+            else{
+                htmlString = `<li class="list_page_detail" style="background-color: #00a5f0;" onclick="catchOnclickPageAndSwitch(event)">
+                ${i}
+                </li>`;
+            }
             paginateElement.innerHTML += htmlString;
         }
+
+
     })
     .catch(function(error){
         console.log(error);
