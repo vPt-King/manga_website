@@ -230,14 +230,11 @@
 }
 
 .show_category_list{
-    display: none;
+    display: block;
     position: absolute;
     width: 700%;
 }
-.show_category_list ul {
-    list-style: none;
-    background-color: white;
-}
+
 .show_category_list .fake_category{
     height: 30px;
 }
@@ -245,6 +242,11 @@
     display: grid;  
     grid-template-columns: 1fr 1fr 1fr 1fr;
     box-shadow: 0 4px 6px -1px rgba(0,0,0,0.5);
+    list-style: none;
+    background-color: white;
+}
+.show_category_list ul li{
+    text-align: left;
 }
 .show_category_list ul li:hover{
     background-color: #BEC3C6;
