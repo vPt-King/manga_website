@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const port = 3000
 const dataFile = './data.json';
+const dataCategoryFile = './category.json';
 const fs = require('fs'); // Import the file system module
 const cors=require("cors");
 const corsOptions ={
@@ -27,6 +28,21 @@ function readData(){
         console.error('Error reading data.json:', error);
       }
 } 
+
+function readCategoryData(){
+  try {
+      const data = fs.readFileSync(dataCategoryFile, 'utf8'); // Read file synchronously
+      return data;
+    } catch (error) {
+      console.error('Error reading data.json:', error);
+    }
+} 
+
+// return category list
+app.get('/category', (req, res) => {
+  categories = Object.values(JSON.parse(readCategoryData()));
+  res.send(JSON.stringify(categories));
+})
 
 // cần trả về số trang, số lượng trang từ đâu đến đâu, query số lượng truyện từ đâu đến đâu
 app.get('/', (req, res) => {

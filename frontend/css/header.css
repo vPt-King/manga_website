@@ -230,7 +230,7 @@
 }
 
 .show_category_list{
-    display: block;
+    display: none;
     position: absolute;
     width: 700%;
 }
@@ -244,6 +244,7 @@
     box-shadow: 0 4px 6px -1px rgba(0,0,0,0.5);
     list-style: none;
     background-color: white;
+    grid-row-gap: 10px;
 }
 .show_category_list ul li{
     text-align: left;
@@ -255,6 +256,7 @@
 .category_list:hover .show_category_list{
     display: block;
 }
+
 
 /* moble */
 @media only screen and (max-width: 739px) {
