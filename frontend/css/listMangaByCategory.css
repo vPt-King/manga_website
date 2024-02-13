@@ -1,0 +1,101 @@
+.container{
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.container .option{
+    margin-bottom: 50px;
+}
+
+.container .option .default_options h2{
+    color: #88807B;
+}
+
+.container .option .top_watch_option{
+    display: none;
+}
+.container .option .top_watch_option ul li{
+    list-style: none;
+}
+
+
+.container .option .title_top{
+    margin-top: 20px;
+    font-weight: 100px;
+    color: #88807B;
+}
+
+
+.title_top .dropbtn {
+    background-color: #48494B;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 300px;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+.title_top .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+.title_top .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+.title_top .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+.title_top .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu on hover */
+.title_top .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+.title_top .dropdown:hover .dropbtn {
+    background-color: #48494B;
+}
+
+.container .list_manga{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* grid-template-rows: repeat(6, 1fr); */
+  grid-column-gap: 8px;
+}
+
+.container .list_manga li a{
+  text-decoration: none;
+  color: black;
+}
+
+.container .list_manga li a h3{
+  color:#363636;
+}
+
+.container .list_manga li a img{
+  border-radius: 10px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.5);
+  transition: all 0.4s;
+}
+
+.container .list_manga li a:hover img{
+  transform: scale(1.09);
+}

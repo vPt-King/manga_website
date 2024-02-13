@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/c299f5d001.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header id="header_page">
+        <nav class="header nav">
+        
+            <label for="mobile_sidebar_input" class="menu">
+                <span class="fa-solid fa-bars"></span>
+            </label>
+            <div class="icon">Manga<b style="color: red;">VN</b></div>
+            
+            <ol class="ol">
+                <li class="li"><a href="/frontend/html/homepage.html">List truyện</a></li>
+                <li class="li category_list">
+                    <a href="#" class="category_list_dropdown">Thể loại</a>
+                    <div class="show_category_list">
+                        <div class="fake_category"></div>
+                        <ul id="show_real_category"></ul>
+                    </div>
+                    
+                </li>
+                <li class="li"><a href="#">Truyện hot</a></li>
+                <li class="li"><a href="#">Tác giả</a></li>
+                <li class="li"><a href="#">Manga</a></li>
+                <li class="li"><a href="#">Manhwa</a></li>
+                <li class="li"><a href="#">Full màu</a></li>
+                <li class="li"><a href="#">Oneshot</a></li>
+            </ol>
+    
+        <!-- Search -->
+            <div class="search_box">
+                <label for="input_search_icon" class="fa-solid fa-magnifying-glass"></label>
+            </div>
+        <!-- Search table -->
+        </nav>
+        <!-- search area -->
+        <input hidden type="checkbox" id="input_search_icon">
+        <label for="input_search_icon" class="header search_overlay"></label>
+        <div class="search_table">
+            <div class="content_search">
+                <input type="text" placeholder="Nhập tên truyện">
+                <a href="">Tìm kiếm nâng cao</a>
+            </div>
+            <div class="search_result">
+                <ul id="show_search_result">
+                    <!-- <li>
+                        <a href="https://truyenqqvn.com/truyen-tranh/one-piece-128">
+                            <div class="search_avatar">
+                                <img src="https://i.truyenvua.com/ebook/80x105/dao-hai-tac_1552224567.jpg?gt=hdfgdfg&mobile=2" alt="">
+                            </div>
+                            <div class="search_infor">
+                                <p class="name">One piece</p>
+                                <p class="chapter">1028</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://truyenqqvn.com/truyen-tranh/naruto-197">
+                            <div class="search_avatar">
+                                <img src="https://i.truyenvua.com/ebook/80x105/naruto_1552225598.jpg?gt=hdfgdfg&mobile=2" alt="">
+                            </div>
+                            <div class="search_infor">
+                                <p class="name">Naruto</p>
+                                <p class="chapter">200</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://truyenqqvn.com/truyen-tranh/naruto-197">
+                            <div class="search_avatar">
+                                <img src="https://i.truyenvua.com/ebook/80x105/naruto_1552225598.jpg?gt=hdfgdfg&mobile=2" alt="">
+                            </div>
+                            <div class="search_infor">
+                                <p class="name">Naruto</p>
+                                <p class="chapter">200</p>
+                            </div>
+                        </a>
+                    </li> -->
+                </ul> 
+            </div>
+        </div>
+        <!-- Moble responsive -->
+        <input type="checkbox" hidden name="" id="mobile_sidebar_input">
+        <div ></div>
+        <label for="mobile_sidebar_input" class="header overlay"></label>
+        <nav class="header side_bar">
+            <div class="side_bar_logo">
+                <div class="icon">Manga<b style="color: red;">VN</b></div>
+                <label for="mobile_sidebar_input" class="fa-regular fa-circle-xmark"></label>
+            </div>
+            <p id="description">Nơi cập nhật các bộ truyện tranh nổi tiếng và nhanh nhất. Xem đầy đủ tại mangaVN</p>
+            <br style="display:block; width: 100%; height: 2px; color: black;">
+            <ol class="ol">
+                <li class="li">
+                    <span class="fa-solid fa-list"></span>
+                    <a href="#">List truyện</a>
+                </li>
+                <li class="li">
+                    <span class="fa-solid fa-book"></span>
+                    <a href="#">Thể loại</a>
+                </li>
+                <li class="li">
+                    <span class="fa-solid fa-user"></span>
+                    <a href="#">Tác giả</a>
+                </li>
+                <li class="li">
+                    <span class="fa-solid fa-book-open"></span>
+                    <a href="#">Manga</a>
+                </li>
+                <li class="li">
+                    <span class="fa-solid fa-chess-rook"></span>
+                    <a href="#">Manhwa</a>
+                </li>
+                <li class="li">
+                    <span class="fa-solid fa-palette"></span>
+                    <a href="#">Full màu</a>
+                </li>
+                <li class="li">
+                    <span class="fa-solid fa-note-sticky"></span>
+                    <a href="#">Oneshot</a>
+                </li>
+    
+            </ol>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="option">
+            <div class="default_options">
+                <h2 id="show_category_title">Truyện thể loại: </h2>
+            </div>
+            <div class="title_top">
+                SẮP XẾP THEO:
+                <div class="dropdown">
+                    <button class="dropbtn">Mặc định</button>
+                    <div class="dropdown-content">
+                      <a href="#">Xem nhiều nhất trong ngày</a>
+                      <a href="#">Xem nhiều nhất trong tuần</a>
+                      <a href="#">Xem nhiều nhất trong tháng</a>
+                      <a href="#">Xem nhiều nhất all</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="list_manga" id="list_manga_detail">
+            
+        </ul>
+    </main>
+    <nav id="paginate">
+        <ul class="list_page" id="paginate_show">
+    
+        </ul>
+    </nav>
+    <footer id="footer_page"></footer>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/forAll.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/listMangaByCategory.css">
+    <link rel="stylesheet" href="../css/paginate.css">
+    <script src="../javascript/loadFooter.js"></script>
+    <script src="../javascript/category.js"></script>
+    <script src="../javascript/fetchMangaAndLoadPaginate.js"></script>
+    <script src="../javascript/listMangaOfCategory.js"></script>
+</body>
+</html>

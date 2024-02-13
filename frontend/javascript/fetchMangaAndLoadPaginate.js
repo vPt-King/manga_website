@@ -20,7 +20,7 @@ function fetchMangaAndLoadPaginateRelated(mangaElement, paginateElement,url){
 
         //get page number from url, if page == i then that is the current page, we hightligt the 
         // current page by background color 
-        const page = parseInt(url.split("=")[1]);
+        const page = parseInt(url.split("page=")[1]);
         for(let i = 1; i <= numberOfPage;i++)
         {
             let htmlString = '';
@@ -36,8 +36,6 @@ function fetchMangaAndLoadPaginateRelated(mangaElement, paginateElement,url){
             }
             paginateElement.innerHTML += htmlString;
         }
-
-
     })
     .catch(function(error){
         console.log(error);
