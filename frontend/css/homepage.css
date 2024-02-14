@@ -28,7 +28,7 @@
 
 .container .list_manga .manga{
     list-style: none;
-    width: 250px;
+    width: 210px;
     height: 430px;
     border-radius: 2px;
 }
@@ -85,7 +85,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     /* grid-template-rows: repeat(6, 1fr); */
-    grid-column-gap: 8px;
+    grid-column-gap: 18px;
 }
 
 .container .list_manga li a{
@@ -103,8 +103,15 @@
     transition: all 0.4s;
 }
 
-.container .list_manga li a:hover img{
+.container .list_manga li a img:hover{
     transform: scale(1.09);
+}
+
+.manga_name{
+    height: 25px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 /* moble */

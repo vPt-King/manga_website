@@ -11,8 +11,9 @@ function fetchMangaAndLoadPaginateRelated(mangaElement, paginateElement,url){
             let html = `<li class="manga">
             <a href="#">
                 <img src="${data.img}" alt="">
-                <h3>${data.name}</h3>
+                <h3 class="manga_name">${data.name}</h3>
                 <h3>Chương: ${data.chapter}</h3>
+                <h3>Lượt xem: ${data.view}</h3>
             </a>
         </li>`;
         mangaElement.innerHTML += html;
