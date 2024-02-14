@@ -99,3 +99,32 @@
 .container .list_manga li a:hover img{
   transform: scale(1.09);
 }
+@media only screen and (max-width: 500px) {
+    
+  .container{
+      margin-top: 50px;   
+      margin-left: 0px;
+      margin-right: 0px;
+  }
+  .container .list_manga{
+      grid-template-columns: 1fr;
+  }
+  .container .list_manga .manga{
+      margin: auto;
+  }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 600px) {
+  .container .list_manga{
+      grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .container .list_manga{
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+  .container .list_manga .manga{
+      margin: auto;
+  }
+}
