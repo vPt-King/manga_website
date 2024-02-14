@@ -3,7 +3,7 @@ const category = data.category;
 const page = data.page;
 let showManga = document.getElementById("list_manga_detail");
 let paginatePage = document.getElementById("paginate_show");
-let title = document.getElementById("show_category_title");
+let title = document.getElementById("show_page_title");
 title.innerHTML += category;
 fetchMangaAndLoadPaginateRelated(showManga, paginatePage, `http://localhost:3000/listMangaOfCategory?category=${category}&page=1`)
 

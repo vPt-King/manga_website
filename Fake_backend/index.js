@@ -85,6 +85,34 @@ app.get('/listMangaOfCategory', (req, res) => {
     return res.send(JSON.stringify(returnedData));
 })
 
+app.get('/hotManga', (req, res) => {
+  const page = parseInt(req.query.page);
+  lastCountedManga= page*25;
+  firstCountedManaga = lastCountedManga - 24;
+  mangas = Object.values(JSON.parse(readData()));
+  pageNumber = numberOfPage(mangas.length);
+  mangas.sort((a, b) => {
+    return b.view - a.view;
+  });
+  let filteredMangas = [];
+    for(i = firstCountedManaga; i <= lastCountedManga;i++)
+    {
+      if(mangas[i]){
+        filteredMangas.push(mangas[i]);
+      }
+      else{
+        break;
+      }
+    }
+  returnedData = {
+    numberOfPage: pageNumber,
+    mangas: filteredMangas
+  }
+  console.log(returnedData);
+  res.send(JSON.stringify(returnedData));
+})
+
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
