@@ -3,6 +3,7 @@ const app = express()
 const port = 3000
 const dataFile = './data.json';
 const dataCategoryFile = './category.json';
+const dataAuthorFile = './author.json';
 const fs = require('fs'); // Import the file system module
 const cors=require("cors");
 const corsOptions ={
@@ -38,6 +39,14 @@ function readCategoryData(){
     }
 } 
 
+function readAuthorData(){
+  try {
+      const data = fs.readFileSync(dataCategoryFile, 'utf8'); // Read file synchronously
+      return data;
+    } catch (error) {
+      console.error('Error reading data.json:', error);
+    }
+} 
 // return category list
 app.get('/category', (req, res) => {
   categories = Object.values(JSON.parse(readCategoryData()));
@@ -111,6 +120,30 @@ app.get('/hotManga', (req, res) => {
   console.log(returnedData);
   res.send(JSON.stringify(returnedData));
 })
+
+
+app.get('/author', (req, res) => {
+  const page = parseInt(req.query.page);
+  lastCountedAuthor = page*25;
+  firstCountedAuthor = lastCountedAuthor - 24;
+  authors = Object.values(JSON.parse(readAuthorData()));
+  pageNumber = numberOfPage(authors.length);
+  let filterAuthor = [];
+  for(i = firstCountedAuthor; i <= lastCountedAuthor;i++)
+  {
+    if(authors[i])
+    {
+      filterAuthor.push(authors[i]);
+    }
+    else break;
+  }
+  returnedData = {
+    numberOfPage: pageNumber,
+    mangas: filterAuthor
+  }
+  res.send(JSON.stringify(returnedData));
+})
+
 
 
 app.listen(port, () => {

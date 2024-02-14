@@ -1,0 +1,86 @@
+{
+    "author_1":{
+        "id":"1",
+        "name":"Eiichiro Oda"
+    },
+    "author_2":{
+        "id":"2",
+        "name":"Hajime Isayama"
+    },
+    "author_3":{
+        "id":"3",
+        "name":"Masashi Kishimoto"
+    },
+    "author_4":{
+        "id":"4",
+        "name":"Hiro Mashima"
+    },
+    "author_5":{
+        "id":"2",
+        "name":"Kohei Horikoshi"
+    },
+    "author_6":{
+        "id":"6",
+        "name":"Tite Kubo"
+    },
+    "author_7":{
+        "id":"7",
+        "name":"Takehiko Inoue"
+    },
+    "author_8":{
+        "id":"8",
+        "name":"Gosho Aoyama"
+    },
+    "author_9":{
+        "id":"9",
+        "name":"Rumiko Takahashi"
+    },
+    "author_10":{
+        "id":"10",
+        "name":"Akira Toriyama"
+    },
+    "author_11":{
+        "id":"11",
+        "name":"Fujiko F. Fujio"
+    },
+    "author_12":{
+        "id":"12",
+        "name":"Osamu Tezuka"
+    },
+    "author_13":{
+        "id":"13",
+        "name":"Naoki Urasawa"
+    },
+    "author_14":{
+        "id":"14",
+        "name":"Inio Asano"
+    },
+    "author_15":{
+        "id":"15",
+        "name":"Junji Ito"
+    },
+    "author_16":{
+        "id":"16",
+        "name":"Kentaro Miura"
+    },
+    "author_17":{
+        "id":"17",
+        "name":"Kei Nishikori"
+    },
+    "author_18":{
+        "id":"18",
+        "name":"Yumi Tamura"
+    },
+    "author_19":{
+        "id":"19",
+        "name":"Atsushi Ohkubo"
+    },
+    "author_20":{
+        "id":"20",
+        "name":"Kazue Kato"
+    },
+    "author_21":{
+        "id":"21",
+        "name":"Sui Ishida"
+    }
+}
