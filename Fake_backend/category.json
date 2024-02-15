@@ -69,18 +69,22 @@
     },
     "category_18":{
         "id":"18",
-        "name":"Oneshot"
+        "name":"One shot"
     },
     "category_19":{
         "id":"19",
         "name":"Shoujo"
     },
     "category_20":{
-        "id":"19",
+        "id":"20",
         "name":"Seinen"
     },
     "category_21":{
-        "id":"19",
+        "id":"21",
         "name":"Shounen"
+    },
+    "category_22":{
+        "id":"22",
+        "name":"Full màu"
     }
 }
