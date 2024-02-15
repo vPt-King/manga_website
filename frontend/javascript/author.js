@@ -20,7 +20,7 @@ fetch("http://localhost:3000/author?page=1")
         }
     }
     authors.forEach(data => {
-        let html = `<li class="author">
+        let html = `<li class="author" onclick="catchEventClickAuthorName(event)">
         <a href="#" class="show_author_name">
             <h3>${data.name}</h3>
         </a>
@@ -42,4 +42,12 @@ function showAuthorBeginWithLette(event){
     </li>`;
     authorArea.innerHTML += html;
     });
+}
+function catchEventClickAuthorName(event){
+    authorData = {
+        page: 1,
+        author: event.target.textContent
+    }
+    localStorage.setItem("getMangaOfAuthor",JSON.stringify(authorData));
+    window.location.href = "/frontend/html/listMangaOfAuthor.html";
 }

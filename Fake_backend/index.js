@@ -80,8 +80,8 @@ app.get('/listMangaOfCategory', (req, res) => {
     let returnedManga = [];
     for(i = firstCountedManaga; i <= lastCountedManga;i++)
     {
-      if(filteredMangas[i]){
-      returnedManga.push(filteredMangas[i]);
+      if(filteredMangas[i-1]){
+      returnedManga.push(filteredMangas[i-1]);
       }
       else{
         break;
@@ -106,8 +106,8 @@ app.get('/hotManga', (req, res) => {
   let filteredMangas = [];
     for(i = firstCountedManaga; i <= lastCountedManga;i++)
     {
-      if(mangas[i]){
-        filteredMangas.push(mangas[i]);
+      if(mangas[i-1]){
+        filteredMangas.push(mangas[i-1]);
       }
       else{
         break;
@@ -129,6 +129,31 @@ app.get('/author', (req, res) => {
 
 
 
+app.get('/listMangaOfAuthor', (req, res) => {
+  const page = req.query.page;
+  const author = req.query.author;
+  let lastCountedManga= page*25;
+  let firstCountedManaga = lastCountedManga - 24;
+  let mangas = Object.values(JSON.parse(readData()));
+  let filterMangas = mangas.filter((manga) => {
+    return manga.author.replace(/\.|\s/g, "_").toLowerCase() == author.toLowerCase()
+  });
+  let pageNumber = numberOfPage(filterMangas.length);
+  let returnMangas = [];
+  for(let i = firstCountedManaga; i <= lastCountedManga; i++)
+  {
+    if(filterMangas[i-1])
+    {
+      returnMangas.push(filterMangas[i-1]);
+    }
+    else break;
+  }
+  let returnedData = {
+    numberOfPage: pageNumber,
+    mangas: returnMangas
+  }
+  res.send(JSON.stringify(returnedData));
+})
 
 
 

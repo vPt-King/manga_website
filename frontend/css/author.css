@@ -23,6 +23,10 @@
     display: inline;
 }
 
+.show_author_name{
+    text-decoration: none;
+}
+
 /* moble */
 @media only screen and (max-width: 500px) {
     
