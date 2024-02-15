@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/c299f5d001.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header id="header_page"></header>
+    <main class="container">
+        
+        <!-- Name option -->
+        <div class="option">
+            
+            <div class="default_options">
+                <h2>MỚI CẬP NHẬT</h2>
+                
+            </div>
+            <div class="title_top">
+                SẮP XẾP THEO:
+                <div class="dropdown">
+                    <button class="dropbtn">Mặc định</button>
+                    <div class="dropdown-content">
+                      <a href="#">Xem nhiều nhất trong ngày</a>
+                      <a href="#">Xem nhiều nhất trong tuần</a>
+                      <a href="#">Xem nhiều nhất trong tháng</a>
+                      <a href="#">Xem nhiều nhất all</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <title>hello</title>
+
+        <!-- list manga in that option -->
+        <ul class="list_manga" id="list_manga_detail">
+            
+        </ul>
+    </main>
+    <nav id="paginate">
+        <ul class="list_page" id="paginate_show">
+    
+        </ul>
+    </nav>
+    <footer id="footer_page"></footer>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/forAll.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/paginate.css">
+    <script src="../javascript/loadHeader.js"></script>
+    <script src="../javascript/loadFooter.js"></script>
+    <script src="../javascript/fetchMangaAndLoadPaginate.js"></script>
+    <script src="../javascript/paginate.js"></script>
+    <script src="../javascript/category.js"></script>
+</body>
+</html>
