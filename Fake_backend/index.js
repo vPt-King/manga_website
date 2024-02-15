@@ -41,7 +41,7 @@ function readCategoryData(){
 
 function readAuthorData(){
   try {
-      const data = fs.readFileSync(dataCategoryFile, 'utf8'); // Read file synchronously
+      const data = fs.readFileSync(dataAuthorFile, 'utf8'); // Read file synchronously
       return data;
     } catch (error) {
       console.error('Error reading data.json:', error);
@@ -123,25 +123,8 @@ app.get('/hotManga', (req, res) => {
 
 
 app.get('/author', (req, res) => {
-  const page = parseInt(req.query.page);
-  lastCountedAuthor = page*25;
-  firstCountedAuthor = lastCountedAuthor - 24;
   authors = Object.values(JSON.parse(readAuthorData()));
-  pageNumber = numberOfPage(authors.length);
-  let filterAuthor = [];
-  for(i = firstCountedAuthor; i <= lastCountedAuthor;i++)
-  {
-    if(authors[i])
-    {
-      filterAuthor.push(authors[i]);
-    }
-    else break;
-  }
-  returnedData = {
-    numberOfPage: pageNumber,
-    mangas: filterAuthor
-  }
-  res.send(JSON.stringify(returnedData));
+  res.send(JSON.stringify(authors));
 })
 
 
