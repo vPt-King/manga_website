@@ -13,10 +13,6 @@ fetch("http://localhost:3000/category")
 
 function redirectToListMangaOfCategory(event){
     let category = event.target.textContent.toLowerCase();
-    dataCategory = {
-        category: category,
-        page: 1
-    }
-    localStorage.setItem("dataCategory", JSON.stringify(dataCategory));
+    localStorage.setItem("category", JSON.stringify(category));
     window.location.href = "/frontend/html/listMangaByCategory.html";
 }
