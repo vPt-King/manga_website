@@ -35,7 +35,7 @@ function showAuthorBeginWithLette(event){
     authorArea.innerHTML="";
     let filterAuthors = authors.filter(author => author.name[0].toLowerCase() == letter);
     filterAuthors.forEach(data => {
-        let html = `<li class="author">
+        let html = `<li class="author" onclick="catchEventClickAuthorName(event)">
         <a href="#" class="show_author_name">
             <h3>${data.name}</h3>
         </a>
@@ -44,10 +44,7 @@ function showAuthorBeginWithLette(event){
     });
 }
 function catchEventClickAuthorName(event){
-    authorData = {
-        page: 1,
-        author: event.target.textContent
-    }
-    localStorage.setItem("getMangaOfAuthor",JSON.stringify(authorData));
+    let author = event.target.textContent;
+    localStorage.setItem("author",JSON.stringify(author));
     window.location.href = "/frontend/html/listMangaOfAuthor.html";
 }
