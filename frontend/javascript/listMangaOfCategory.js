@@ -7,7 +7,7 @@ fetchMangaAndLoadPaginateRelated(showManga, paginatePage, `http://localhost:3000
 
 function catchOnclickPageAndSwitch(event){
     let page = parseInt(event.target.textContent);
-    let mangas = localStorage.getItem("mangas");
+    let mangas = JSON.parse(localStorage.getItem("mangas"));
     showMangasInSpecificPage(mangas, showManga, paginatePage, page);
 }
 

@@ -55,3 +55,4 @@ function fetchMangaAndLoadPaginateRelated(mangaElement, paginateElement,url){
         console.log(error);
     })
 }
+
