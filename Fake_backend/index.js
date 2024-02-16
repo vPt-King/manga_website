@@ -12,14 +12,7 @@ const corsOptions ={
    optionSuccessStatus:200,
 }
 
-function numberOfPage(numberOfManga) {
-  let ketQua = numberOfManga / 25;
-  if (Number.isInteger(ketQua)) {
-    return ketQua;
-  } else {
-    return Math.ceil(ketQua);
-  }
-}
+
 app.use(cors(corsOptions)) // Use this after the variable declaration
 function readData(){
     try {
@@ -55,17 +48,8 @@ app.get('/category', (req, res) => {
 
 // cần trả về số trang, số lượng trang từ đâu đến đâu, query số lượng truyện từ đâu đến đâu
 app.get('/', (req, res) => {
-    const page = parseInt(req.query.page);
-    lastIdManga= page*25;
-    firstIdManaga = lastIdManga - 24;
     mangas = Object.values(JSON.parse(readData()));
-    pageNumber = numberOfPage(mangas.length);
-    const filteredMangas = mangas.filter(manga => parseInt(manga.id) >= firstIdManaga && parseInt(manga.id) <= lastIdManga);
-    returnedData = {
-      numberOfPage: pageNumber,
-      mangas: filteredMangas
-    }
-    res.send(JSON.stringify(returnedData));
+    res.send(JSON.stringify(mangas));
 })
 
 app.get('/listMangaOfCategory', (req, res) => {
