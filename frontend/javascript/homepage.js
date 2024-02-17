@@ -10,6 +10,8 @@ function catchOnclickPageAndSwitch(event){
 
 function sortAll(event)
 {
+    let showOption = document.getElementById("show_option");
+    showOption.innerHTML = "Xem nhiều nhất all";
     let mangas = JSON.parse(localStorage.getItem("mangas"));
     mangas.sort((a, b) => {
         return b.view - a.view;

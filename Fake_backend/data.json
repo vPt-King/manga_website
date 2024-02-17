@@ -4,6 +4,7 @@
         "name": "Hội Pháp Sư anh hùng thành phố",
         "chapter": "36",
         "category": "action",
+        "view_day":"1",
         "view": "1896532",
         "author": "Akira Toriyama",
         "img": "https://st.nettruyenss.com/data/comics/108/fairy-tail-city-hero.jpg"
@@ -12,7 +13,7 @@
         "id": "2",
         "name": "Càng Đánh Càng Mạnh Mạnh quá thì sẽ bị gãy tay đó thím ơi",
         "chapter": "37",
-        "category": "action",
+        "category": "action","view_day":"1",
         "view": "1896531",
         "author": "Akira Toriyama",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -21,7 +22,7 @@
         "id": "3",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "action",
+        "category": "action","view_day":"1",
         "view": "189",
         "author": "Atsushi Ohkubo",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -30,7 +31,7 @@
         "id": "4",
         "name": "Càng Đánh Càng Mạnh dai oi la dai super dai ko the dai hon dai vai chuong",
         "chapter": "37",
-        "category": "action",
+        "category": "action","view_day":"1",
         "view": "18962",
         "author": "Eiichiro Oda",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -39,7 +40,7 @@
         "id": "5",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "action",
+        "category": "action","view_day":"5",
         "view": "1896232",
         "author": "Fujiko F. Fujio",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -48,7 +49,7 @@
         "id": "6",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "action",
+        "category": "action","view_day":"5",
         "view": "186532",
         "author": "Gosho Aoyama",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -57,7 +58,7 @@
         "id": "7",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "action",
+        "category": "action","view_day":"5",
         "view": "1865312",
         "author": "Hajime Isayama",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -66,7 +67,7 @@
         "id": "8",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "action",
+        "category": "action","view_day":"5",
         "view": "18653652",
         "author": "Hiro Mashima",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -75,7 +76,7 @@
         "id": "9",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "action",
+        "category": "action","view_day":"5",
         "view": "18653",
         "author": "Inio Asano",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -84,7 +85,7 @@
         "id": "10",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "action",
+        "category": "action","view_day":"5",
         "view": "186532555",
         "author": "Junji Ito",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -93,7 +94,7 @@
         "id": "11",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "action",
+        "category": "action","view_day":"2",
         "view": "12",
         "author": "Kazue Kato",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -102,7 +103,7 @@
         "id": "12",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "action",
+        "category": "action","view_day":"5",
         "view": "1836",
         "author": "Kei Nishikori",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -111,7 +112,7 @@
         "id": "13",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "action",
+        "category": "action","view_day":"8",
         "view": "1867",
         "author": "Kentaro Miura",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -120,7 +121,7 @@
         "id": "14",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "action",
+        "category": "action","view_day":"8",
         "view": "186592",
         "author": "Kohei Horikoshi",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -129,7 +130,7 @@
         "id": "15",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "action",
+        "category": "action","view_day":"8",
         "view": "286532",
         "author": "Masashi Kishimoto",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -138,7 +139,7 @@
         "id": "16",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "action",
+        "category": "action","view_day":"8",
         "view": "1789",
         "author": "Naoki Urasawa",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -147,7 +148,7 @@
         "id": "17",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "adult",
+        "category": "adult","view_day":"8",
         "view": "7893",
         "author": "Osamu Tezuka",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -156,7 +157,7 @@
         "id": "18",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "action",
+        "category": "action","view_day":"15",
         "view": "186532123",
         "author": "Rumiko Takahashi",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -165,7 +166,7 @@
         "id": "19",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "adult",
+        "category": "adult","view_day":"15",
         "view": "18650",
         "author": "Sui Ishida",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -174,7 +175,7 @@
         "id": "20",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "adult",
+        "category": "adult","view_day":"15",
         "view": "18002",
         "author": "Takehiko Inoue",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -183,7 +184,7 @@
         "id": "21",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "adult",
+        "category": "adult","view_day":"15",
         "view": "786532",
         "author": "Tite Kubo",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -192,7 +193,7 @@
         "id": "22",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "adult",
+        "category": "adult","view_day":"10",
         "view": "1780",
         "author": "Yumi Tamura",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -201,7 +202,7 @@
         "id": "23",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "adult",
+        "category": "adult","view_day":"10",
         "view": "78922",
         "author": "Yumi Tamura",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -210,7 +211,7 @@
         "id": "24",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "adult",
+        "category": "adult","view_day":"10",
         "view": "12300",
         "author": "Yumi Tamura",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -219,6 +220,7 @@
         "id": "25",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
+        "category": "adult","view_day":"10",
         "view": "186532012",
         "author": "Yumi Tamura",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -227,6 +229,7 @@
         "id": "26",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
+        "category": "adult","view_day":"10",
         "view": "8750",
         "author": "Yumi Tamura",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -235,7 +238,7 @@
         "id": "27",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "manga",
+        "category": "manga","view_day":"12",
         "view": "9850",
         "author": "Yumi Tamura",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -244,7 +247,7 @@
         "id": "28",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "adult",
+        "category": "adult","view_day":"12",
         "view": "963100",
         "author": "Takehiko Inoue",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -253,7 +256,7 @@
         "id": "29",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "manga",
+        "category": "manga","view_day":"12",
         "view": "15483",
         "author": "Takehiko Inoue",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -262,7 +265,7 @@
         "id": "30",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"26",
         "view": "45632",
         "author": "Takehiko Inoue",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -271,7 +274,7 @@
         "id": "31",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"26",
         "view": "12388320",
         "author": "Takehiko Inoue",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -280,7 +283,7 @@
         "id": "32",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"26",
         "view": "67890",
         "author": "Takehiko Inoue",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -289,7 +292,7 @@
         "id": "33",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"26",
         "view": "156800",
         "author": "Takehiko Inoue",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -298,7 +301,7 @@
         "id": "34",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"5",
         "view": "45620",
         "author": "Takehiko Inoue",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -307,7 +310,7 @@
         "id": "35",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"5",
         "view": "489202",
         "author": "Osamu Tezuka",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -316,7 +319,7 @@
         "id": "36",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"5",
         "view": "123598",
         "author": "Osamu Tezuka",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -325,7 +328,7 @@
         "id": "37",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"4",
         "view": "98752",
         "author": "Osamu Tezuka",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -334,7 +337,7 @@
         "id": "38",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"4",
         "view": "10548",
         "author": "Osamu Tezuka",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -343,7 +346,7 @@
         "id": "39",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"4",
         "view": "822423",
         "author": "Osamu Tezuka",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -352,7 +355,7 @@
         "id": "40",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"30",
         "view": "123581",
         "author": "Osamu Tezuka",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -361,7 +364,7 @@
         "id": "41",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"30",
         "view": "98621",
         "author": "Osamu Tezuka",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -370,7 +373,7 @@
         "id": "42",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"31",
         "view": "123584",
         "author": "Osamu Tezuka",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -379,7 +382,7 @@
         "id": "43",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"31",
         "view": "25463",
         "author": "Osamu Tezuka",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -388,7 +391,7 @@
         "id": "44",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"31",
         "view": "6531",
         "author": "Osamu Tezuka",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -397,7 +400,7 @@
         "id": "45",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"31",
         "view": "12682",
         "author": "Masashi Kishimoto",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -406,7 +409,7 @@
         "id": "46",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"31",
         "view": "23654",
         "author": "Masashi Kishimoto",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -415,7 +418,7 @@
         "id": "47",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"37",
         "view": "54932",
         "author": "Masashi Kishimoto",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -424,7 +427,7 @@
         "id": "48",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"37",
         "view": "11123",
         "author": "Masashi Kishimoto",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -433,7 +436,7 @@
         "id": "49",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"37",
         "view": "8798797",
         "author": "Masashi Kishimoto",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -442,7 +445,7 @@
         "id": "50",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"37",
         "view": "13335",
         "author": "Masashi Kishimoto",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -451,7 +454,7 @@
         "id": "51",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"39",
         "view": "16666",
         "author": "Masashi Kishimoto",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -460,7 +463,7 @@
         "id": "52",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"39",
         "view": "2222",
         "author": "Kei Nishikori",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -469,6 +472,7 @@
         "id": "53",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
+        "category": "mature","view_day":"39",
         "view": "22236",
         "author": "Kei Nishikori",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -477,7 +481,7 @@
         "id": "54",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"40",
         "view": "33365",
         "author": "Kei Nishikori",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -486,7 +490,7 @@
         "id": "55",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"59",
         "view": "555568",
         "author": "Kei Nishikori",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -495,7 +499,7 @@
         "id": "56",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"39",
         "view": "88953",
         "author": "Kei Nishikori",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -504,7 +508,7 @@
         "id": "57",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"47",
         "view": "123556",
         "author": "Kei Nishikori",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -513,7 +517,7 @@
         "id": "58",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"32",
         "view": "66666",
         "author": "Eiichiro Oda",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -522,7 +526,7 @@
         "id": "59",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"54",
         "view": "7778",
         "author": "Eiichiro Oda",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -531,7 +535,7 @@
         "id": "60",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"76",
         "view": "999863",
         "author": "Eiichiro Oda",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -540,7 +544,7 @@
         "id": "61",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"68",
         "view": "885632",
         "author": "Eiichiro Oda",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"
@@ -549,7 +553,7 @@
         "id": "62",
         "name": "Càng Đánh Càng Mạnh",
         "chapter": "37",
-        "category": "mature",
+        "category": "mature","view_day":"98",
         "view": "9998623",
         "author": "Eiichiro Oda",
         "img": "https://st.nettruyenss.com/data/comics/100/cang-danh-cang-manh.jpg"

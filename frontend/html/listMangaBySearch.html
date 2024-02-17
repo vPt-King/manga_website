@@ -21,7 +21,7 @@
             <div class="title_top">
                 SẮP XẾP THEO:
                 <div class="dropdown">
-                    <button class="dropbtn">Mặc định</button>
+                    <button class="dropbtn" id="show_option">Mặc định</button>
                     <div class="dropdown-content">
                       <a href="#">Xem nhiều nhất trong ngày</a>
                       <a href="#">Xem nhiều nhất trong tuần</a>
@@ -54,16 +54,31 @@
     <script src="../javascript/category.js"></script>
     <script>
         let pageTitle = document.getElementById("show_title_page");
-        let data = JSON.parse(localStorage.getItem("mangas"));
+        let data = JSON.parse(localStorage.getItem("searchData"));
         pageTitle.innerHTML += data.search;
         let showManga = document.getElementById("list_manga_detail");
         let paginateArea = document.getElementById("paginate_show");
         let mangas = data.mangas;
+        localStorage.setItem("mangas",JSON.stringify(mangas));
         showMangasInSpecificPage(mangas, showManga, paginateArea, 1);
         function catchOnclickPageAndSwitch(event){
             let page = parseInt(event.target.textContent);
-            showMangasInSpecificPage(mangas, showManga, paginateArea, page);
+            showMangasInSpecificPage(JSON.parse(localStorage.getItem("mangas")), showManga, paginateArea, page);
         }
+        function sortAll(event)
+        {
+            let showOption = document.getElementById("show_option");
+            showOption.innerHTML = "Xem nhiều nhất all";
+            let mangas = JSON.parse(localStorage.getItem("mangas"));
+            mangas.sort((a, b) => {
+                return b.view - a.view;
+            });
+            localStorage.setItem("mangas", JSON.stringify(mangas));
+            let mangaArea = document.getElementById("list_manga_detail");
+            let paginateArea = document.getElementById("paginate_show");
+            showMangasInSpecificPage(mangas, mangaArea, paginateArea, 1);
+        }
+
     </script>
 </body>
 </html>

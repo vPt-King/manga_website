@@ -16,11 +16,11 @@ $(function () {
                 return res.json()
             })
             .then((data)=>{
-                let mangas = {
+                let searchData = {
                     search: name,
                     mangas: data
                 }
-                localStorage.setItem("mangas", JSON.stringify(mangas));
+                localStorage.setItem("searchData", JSON.stringify(searchData));
                 window.location.href = "/frontend/html/listMangaBySearch.html";
             })
 
