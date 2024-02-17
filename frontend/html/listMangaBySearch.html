@@ -10,9 +10,13 @@
 <body>
     <header id="header_page"></header>
     <main class="container">
+        
+        <!-- Name option -->
         <div class="option">
+            
             <div class="default_options">
-                <h2 id="show_page_title">Truyện thể loại: </h2>
+                <h2 id="show_title_page">Tìm kiếm truyện: </h2>
+                
             </div>
             <div class="title_top">
                 SẮP XẾP THEO:
@@ -22,12 +26,14 @@
                       <a href="#">Xem nhiều nhất trong ngày</a>
                       <a href="#">Xem nhiều nhất trong tuần</a>
                       <a href="#">Xem nhiều nhất trong tháng</a>
-                      <a href="#">Xem nhiều nhất all</a>
+                      <a style="cursor: pointer;" onclick="sortAll(event)">Xem nhiều nhất all</a>
                     </div>
                 </div>
             </div>
         </div>
+        <title>hello</title>
 
+        <!-- list manga in that option -->
         <ul class="list_manga" id="list_manga_detail">
             
         </ul>
@@ -41,11 +47,23 @@
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/forAll.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/listMangaByCategory.css">
+    <link rel="stylesheet" href="../css/homepage.css">
     <link rel="stylesheet" href="../css/paginate.css">
     <script src="../javascript/loadHeaderAndFooterAndSearch.js"></script>
-    <script src="../javascript/category.js"></script>
     <script src="../javascript/fetchMangaAndLoadPaginate.js"></script>
-    <script src="../javascript/listMangaOfCategory.js"></script>
+    <script src="../javascript/category.js"></script>
+    <script>
+        let pageTitle = document.getElementById("show_title_page");
+        let data = JSON.parse(localStorage.getItem("mangas"));
+        pageTitle.innerHTML += data.search;
+        let showManga = document.getElementById("list_manga_detail");
+        let paginateArea = document.getElementById("paginate_show");
+        let mangas = data.mangas;
+        showMangasInSpecificPage(mangas, showManga, paginateArea, 1);
+        function catchOnclickPageAndSwitch(event){
+            let page = parseInt(event.target.textContent);
+            showMangasInSpecificPage(mangas, showManga, paginateArea, page);
+        }
+    </script>
 </body>
 </html>

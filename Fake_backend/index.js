@@ -1,6 +1,6 @@
 const express = require('express')
-const app = express()
-const port = 3000
+const app = express();
+const port = 3000;
 const dataFile = './data.json';
 const dataCategoryFile = './category.json';
 const dataAuthorFile = './author.json';
@@ -11,6 +11,11 @@ const corsOptions ={
    credentials:true,            //access-control-allow-credentials:true
    optionSuccessStatus:200,
 }
+
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 
 app.use(cors(corsOptions)) // Use this after the variable declaration
@@ -84,7 +89,14 @@ app.get('/listMangaOfAuthor', (req, res) => {
   res.send(JSON.stringify(filterMangas));
 })
 
-
+app.post('/search-manga-by-name',(req,res)=>{
+  const name = req.body.name;
+  let mangas = Object.values(JSON.parse(readData()));
+  let filterMangas = mangas.filter((manga) => {
+    return manga.name.toLowerCase().includes(name);
+  });
+  res.send(JSON.stringify(filterMangas));
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
