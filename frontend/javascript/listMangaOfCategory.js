@@ -38,3 +38,16 @@ function sortByViewDay(event){
     let paginateArea = document.getElementById("paginate_show");
     showMangasInSpecificPage(mangas, mangaArea, paginateArea, 1);
 }
+
+function sortByViewWeek(event){
+    let showOption = document.getElementById("show_option");
+    showOption.innerHTML = "Xem nhiều nhất trong tuần";
+    let mangas = JSON.parse(localStorage.getItem("mangas"));
+    mangas.sort((a, b) => {
+        return b.view_week - a.view_week;
+    });
+    localStorage.setItem("mangas", JSON.stringify(mangas));
+    let mangaArea = document.getElementById("list_manga_detail");
+    let paginateArea = document.getElementById("paginate_show");
+    showMangasInSpecificPage(mangas, mangaArea, paginateArea, 1);
+}
