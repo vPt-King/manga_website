@@ -8,6 +8,7 @@
     text-align: center;
     padding: 15px 30px;
     z-index: 1;
+    box-shadow: 1px;
 }
 
 .header.nav .menu{
@@ -42,17 +43,29 @@
     cursor: pointer;
 }
 
-.header.nav .ol{
+.catalog .ol{
     display: flex;
     list-style: none;
     margin: auto 0;
+    line-height: 60px;
+    justify-content: space-around;
 }
 
-.header.nav .ol .li{
+.catalog .ol .li{
     margin: 0 2px;
+    flex-basis: 130px;
+    text-align: center;
 }
 
-.header.nav .ol .li a{
+.catalog .ol .li:hover{
+    background-color: white;
+}
+
+.catalog .ol .li:hover a{
+    color: black;
+}
+
+.catalog .ol .li a{
     color: #fff;
     font-size: 20px;
     text-decoration: none;
@@ -61,7 +74,7 @@
     padding: 5px 10px;
 }
 
-.header.nav .ol .li ul li a{
+.catalog .ol .li ul li a{
     text-decoration: none;
     color: black;
 }
@@ -112,7 +125,8 @@
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     text-align: left;
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */
+    font-family: 'Poppins',sans-serif;
     font-size: 16px;
     font-weight: normal;
     color: #333;
@@ -136,6 +150,7 @@
 .header.nav .search_box .advance_search a strong{
     width: 100%;
     display: block;
+    font-family: 'Poppins',sans-serif;
 }
 .header.nav .search_box .advance_search a:hover{
     text-decoration: underline;
@@ -152,31 +167,25 @@
     width: 100px;
     text-decoration: none;
     line-height: 50px;
+    font-family: 'Poppins',sans-serif;
 }
 
 .header.nav .login_registers_container .login_registers strong{
     color: white;
 }
-.header.nav .login_registers_container a:hover strong{
-    color: yellow;
+.header.nav .login_registers_container a:hover{
+    background-color: white;
 }
-/* .header.nav .search_box label:after{
-    height: 100%;
-    width:100%;
-    content:'';
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-} */
 
+.header.nav .login_registers_container a:hover strong{
+    color: black;
+}
 
 
 .header.nav .bar{
     position: relative;
     margin: auto;
     display: none;
-
 }
 .header.nav .bar span{
     position: absolute;
@@ -226,7 +235,7 @@
 }
 
 /* Search table */
-.search_table{
+/* .search_table{
     max-height: 500px;
     width: 400px;
     background-color: white;
@@ -248,7 +257,7 @@
     top: 50px;
     right: 10px;
     text-decoration: none;
-    /* margin-left: 235px; */
+    margin-left: 235px;
     position: absolute;
 }
 .search_table .search_result{
@@ -269,7 +278,7 @@
     background-color: #BEC3C6;
 }
 .search_table .search_result ul li a{
-    margin: 8px; /* Cài đặt margin cho tất cả các cạnh */
+    margin: 8px; 
     text-decoration: none;
     display: flex;
 }
@@ -280,7 +289,7 @@
 
 .search_table .search_result ul li a .search_infor .chapter{
     margin-top: 5px;
-}
+} */
 
 .header.search_overlay{
     display: none;
@@ -309,12 +318,13 @@
 .show_category_list{
     display: none;
     position: absolute;
-    width: 700%;
+    width: 500%;
+    z-index: 1;
 }
 
-.show_category_list .fake_category{
+/* .show_category_list .fake_category{
     height: 30px;
-}
+} */
 .show_category_list ul{
     display: grid;  
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -325,6 +335,8 @@
 }
 .show_category_list ul li{
     text-align: left;
+    height: 50px;
+    line-height: 50px;
 }
 .show_category_list ul li:hover{
     background-color: #BEC3C6;
@@ -334,10 +346,28 @@
     display: block;
 }
 
+.catalog{
+    height: 60px;
+    width: 100%;
+    background-color: #151515;
+}
+
 
 /* moble */
 @media only screen and (max-width: 739px) {
+
+    .catalog{
+        display: none;
+    }
     
+    .header.nav .search_box{
+        display: none;
+    }
+
+    .header.nav .login_registers_container{
+        display: none;
+    }
+
     .header.side_bar{
         display: block;
     }
@@ -345,11 +375,13 @@
         display: none;
     }
 
-
+    .header.nav .icon{
+        margin-right: 20px;
+    }
     .header.nav .menu{
         display: block;
     }
-    .header.nav .search_box label{
+    /* .header.nav .search_box label{
         color: #fff;
         background-color:#0a0c0f;
         height: 100%;
@@ -372,7 +404,7 @@
     .header.nav .search_box label:hover:after{
         width: 100%;
         background-color:#0a0c0f;
-    }
+    } */
 
     /* .header.side_bar{
         display: block;
@@ -385,11 +417,35 @@
         margin-bottom: 12px;
     }
 
+    .header.side_bar .search_sidebar{
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .header.side_bar .search_sidebar .search_input{
+        display: flex;
+    }
+    
+    .header.side_bar .search_sidebar a{
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+    }
+    .header.side_bar .search_sidebar input{
+        height: 30px;
+        width: 100%;
+    }
+    .header.side_bar .search_sidebar input::placeholder{
+        font-weight: bold; /* Làm cho font chữ đậm hơn */
+        color: #999; /* Thay đổi màu sắc */
+        text-indent: 7px;
+        opacity: 0.8; /* Giảm độ mờ */
+    }
     .header.side_bar .ol .li a{
         margin-left: 20px;
     }
     .header.side_bar .ol .li:hover{
-        background-color: #FFD300;
+        background-color: white;
     }
     .header.side_bar .ol .li:hover a{
         color: black;
@@ -404,7 +460,7 @@
         align-items: center;
     }
     .header.side_bar .side_bar_logo label:hover{
-        color:#FFD300;
+        cursor: pointer;
     }
 
     /* Show overlay and side bar menu */
@@ -419,11 +475,11 @@
 
 
     /* search in mobile */
-    .search_table{
+    /* .search_table{
         height: 430px;
         width: 100%;
         display: none;
-    }
+    } */
 
     
 }
@@ -481,7 +537,7 @@
         margin-left: 20px;
     }
     .header.side_bar .ol .li:hover{
-        background-color: #FFD300;
+        background-color: white;
     }
     .header.side_bar .ol .li:hover a{
         color: black;
@@ -496,7 +552,7 @@
         align-items: center;
     }
     .header.side_bar .side_bar_logo label:hover{
-        color:#FFD300;
+        color:white;
     }
 
     /* Show overlay and side bar menu */

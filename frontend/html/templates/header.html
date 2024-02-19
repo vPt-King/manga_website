@@ -51,6 +51,28 @@
             </ul> 
         </div>
     </div> -->
+    
+    <nav class="catalog">
+        <ol class="ol">
+            <li class="li"><a href="/frontend/html/homepage.html">List truyện</a></li>
+            <li class="li category_list">
+                <a href="#" class="category_list_dropdown">Thể loại</a>
+                <div class="show_category_list">
+                    <!-- <div class="fake_category"></div> -->
+                    <ul id="show_real_category"></ul>
+                </div>
+                
+            </li>
+            <li class="li"><a href="/frontend/html/hotManga.html">Truyện hot</a></li>
+            <li class="li"><a href="/frontend/html/author.html">Tác giả</a></li>
+            <li class="li" onclick="redirectToListMangaOfCategory(event)"><a href="#">Manga</a></li>
+            <li class="li" onclick="redirectToListMangaOfCategory(event)"><a href="#">Manhwa</a></li>
+            <li class="li" onclick="redirectToListMangaOfCategory(event)"><a href="#">Full màu</a></li>
+            <li class="li" onclick="redirectToListMangaOfCategory(event)"><a href="#">Oneshot</a></li>
+        </ol> 
+    </nav>
+
+    
     <!-- Moble responsive -->
     <input type="checkbox" hidden name="" id="mobile_sidebar_input">
     <div ></div>
@@ -60,9 +82,21 @@
             <div class="icon">Manga<b style="color: red;">VN</b></div>
             <label for="mobile_sidebar_input" class="fa-regular fa-circle-xmark"></label>
         </div>
-        <p id="description">Nơi cập nhật các bộ truyện tranh nổi tiếng và nhanh nhất. Xem đầy đủ tại mangaVN</p>
+        <div class="search_sidebar">
+            
+            <input type="text" name="" id="search_input_mobile" onkeypress="handleSearchMobile(event)" placeholder="Nhập tên truyện cần tìm">
+            <a href="#">Tìm kiếm nâng cao</a>
+        </div>
         <br style="display:block; width: 100%; height: 2px; color: black;">
         <ol class="ol">
+            <li class="li">
+                <span class="fa-solid fa-right-to-bracket"></span>
+                <a href="#">Đăng nhập</a>
+            </li>
+            <li class="li">
+                <span class="fa-solid fa-registered"></span>
+                <a href="#">Đăng kí</a>
+            </li>
             <li class="li">
                 <span class="fa-solid fa-list"></span>
                 <a href="#">List truyện</a>
@@ -94,4 +128,37 @@
 
         </ol>
     </nav>
+    <script>
+        function handleSearchMobile(event)
+        {
+            let searchContent = document.getElementById("search_input_mobile");
+            if (event.keyCode === 13) {
+                const name = searchContent.value;
+                if (!name || /^\s+$/.test(name)) {
+                    alert("Bạn không được để trống tên truyện")
+                }
+                else {
+                    let data = {
+                        name: name
+                    }
+                    fetch("http://localhost:3000/search-manga-by-name", {
+                        method: "POST",
+                        body: JSON.stringify(data),
+                        headers: { 'Content-Type': 'application/json' }
+                    })
+                        .then((res) => {
+                            return res.json()
+                        })
+                        .then((data) => {
+                            let searchData = {
+                                search: name,
+                                mangas: data
+                            }
+                            localStorage.setItem("searchData", JSON.stringify(searchData));
+                            window.location.href = "/frontend/html/listMangaBySearch.html";
+                        })
+                }
+            }
+        }
+    </script>
 </header>

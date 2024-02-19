@@ -4,7 +4,7 @@ $(function () {
         const searchLabel = document.getElementById("label_search");
         searchLabel.addEventListener('click', handleSearchByClick);
         searchContent.addEventListener('keyup', handleSearchByEnter);
-        let search_overlay = document.getElementById("search_overlay");
+        // let search_overlay = document.getElementById("search_overlay");
         function handleSearchByEnter(event) {
             if (event.keyCode === 13) {
                 const name = searchContent.value;
@@ -71,5 +71,4 @@ $(function () {
 $(function () {
     $("#footer_page").load("../html/templates/footer.html");
 })
-
 
