@@ -68,24 +68,99 @@
 
 .header.nav .search_box{
     display: flex;
-    margin: auto 0;
-    height: 35px;
-    line-height: 35px;
+    margin-top: 8px;
+    height: 100%;
+    /* line-height: 35px; */
+    justify-content:center;
+    align-items: center;
+    margin-right: 200px;
+    /* flex-grow: 2; */
+    width: 660px;
 }
 
+.header.nav .search_box input::placeholder {
+    font-family: Arial, sans-serif; /* Thay đổi font chữ */
+    font-size: 16px; /* Tăng kích thước font chữ */
+    font-weight: bold; /* Làm cho font chữ đậm hơn */
+    color: #999; /* Thay đổi màu sắc */
+    text-indent: 10px;
+    opacity: 0.8; /* Giảm độ mờ */
+}
+  
+.header.nav .search_box input:focus{
+    outline-width: 0;
+}
 
 .header.nav .search_box label{
-    color: white;
-    background: #0a0c0f;
-    height: 100%;
-    padding: 8px;
+    color: black;
+    background: white;
+    height: 40px;
+    padding: 10px;
     position: relative;
     cursor: pointer;
     z-index: 1;
-    border-radius: 5px;
+    line-height: 20px;
+    width: 48px;
+    border-top-right-radius:10px ;
+    border-bottom-right-radius: 10px;
 }
 
-.header.nav .search_box label:after{
+.header.nav .search_box input{
+    width: 350px;
+    border: 0;
+    height: 40px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: #333;
+    padding-left: 12px;
+    margin-left: 50px;
+    width: 60%;
+}
+
+.header.nav .search_box .advance_search{
+    width: 160px;
+    margin-left: 20px;
+}
+
+.header.nav .search_box .advance_search a{
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    width: 100%;
+    display: block;
+}
+.header.nav .search_box .advance_search a strong{
+    width: 100%;
+    display: block;
+}
+.header.nav .search_box .advance_search a:hover{
+    text-decoration: underline;
+}
+
+.header.nav .login_registers_container{
+    display: flex;
+    flex-grow: 2;
+    flex-basis: 100px ;
+    /* width: 400px; */
+}
+
+.header.nav .login_registers_container .login_registers{
+    width: 100px;
+    text-decoration: none;
+    line-height: 50px;
+}
+
+.header.nav .login_registers_container .login_registers strong{
+    color: white;
+}
+.header.nav .login_registers_container a:hover strong{
+    color: yellow;
+}
+/* .header.nav .search_box label:after{
     height: 100%;
     width:100%;
     content:'';
@@ -93,7 +168,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-}
+} */
 
 
 

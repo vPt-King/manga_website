@@ -7,7 +7,7 @@
         </label>
         <div class="icon">Manga<b style="color: red;">VN</b></div>
         
-        <ol class="ol">
+        <!-- <ol class="ol">
             <li class="li"><a href="/frontend/html/homepage.html">List truyện</a></li>
             <li class="li category_list">
                 <a href="#" class="category_list_dropdown">Thể loại</a>
@@ -23,18 +23,24 @@
             <li class="li" onclick="redirectToListMangaOfCategory(event)"><a href="#">Manhwa</a></li>
             <li class="li" onclick="redirectToListMangaOfCategory(event)"><a href="#">Full màu</a></li>
             <li class="li" onclick="redirectToListMangaOfCategory(event)"><a href="#">Oneshot</a></li>
-        </ol>
+        </ol> -->
 
     <!-- Search -->
         <div class="search_box">
-            <label for="input_search_icon" class="fa-solid fa-magnifying-glass"></label>
+            <input type="text" placeholder="Nhập tên truyện" id="search_input">
+            <label id="label_search" class="fa-solid fa-magnifying-glass"></label>
+            <div class="advance_search"><a href="#"><strong>Tìm kiếm nâng cao</strong></a></div>
+        </div>
+        <div class="login_registers_container">
+            <a href="#" class="login_registers login"><strong>Đăng nhập</strong></a>
+            <a href="#" class="login_registers register"><strong>Đăng kí</strong></a>
         </div>
     <!-- Search table -->
     </nav>
     <!-- search area -->
-    <input hidden type="checkbox" id="input_search_icon">
-    <label for="input_search_icon" class="header search_overlay" id="search_overlay"></label>
-    <div class="search_table">
+    <!-- <input hidden type="checkbox" id="input_search_icon"> -->
+    <!-- <label for="input_search_icon" class="header search_overlay" id="search_overlay"></label> -->
+    <!-- <div class="search_table">
         <div class="content_search">
             <input type="text" placeholder="Nhập tên truyện" id="search_input">
             <a href="">Tìm kiếm nâng cao</a>
@@ -44,7 +50,7 @@
                 
             </ul> 
         </div>
-    </div>
+    </div> -->
     <!-- Moble responsive -->
     <input type="checkbox" hidden name="" id="mobile_sidebar_input">
     <div ></div>
