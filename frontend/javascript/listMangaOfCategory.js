@@ -2,8 +2,11 @@ const category = JSON.parse(localStorage.getItem("category"));
 let showManga = document.getElementById("list_manga_detail");
 let paginatePage = document.getElementById("paginate_show");
 let title = document.getElementById("show_page_title");
-title.innerHTML += category;
-fetchMangaAndLoadPaginateRelated(showManga, paginatePage, `http://localhost:3000/listMangaOfCategory?category=${category}`)
+const categories_array = category.split("_");
+categories_array.forEach(category => {
+    title.innerHTML += category + " ";
+});
+fetchMangaAndLoadPaginateRelated(showManga, paginatePage, `http://localhost:3000/listMangaOfCategory?category=${category.toLowerCase()}`)
 
 function catchOnclickPageAndSwitch(event){
     let page = parseInt(event.target.textContent);

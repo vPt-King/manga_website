@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/c299f5d001.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header id="header_page"></header>
+    <main class="container">
+        <h2>Tìm kiếm nâng cao</h2>
+        <div class="search search_by_name">
+            <div class="title">
+                <h3>Tìm kiếm theo tên truyện</h3>
+            </div>
+            <div class="search_area">
+                <input type="text" placeholder="Tìm kiếm theo tên" id="input_name">
+                <button onclick="searchMangaByName(event)">Tìm kiếm</button>
+            </div>
+        </div>
+
+        <div class="search search_by_author_name">
+            <div class="title">
+                <h3>Tìm kiếm theo tên tác giả</h3>
+            </div>
+            <div class="search_area">
+                <input type="text" placeholder="Tìm kiếm theo tên tác giả" id="input_author_name">
+                <button onclick="searchMangaByAuthorName(event)">Tìm kiếm</button>
+            </div>
+        </div>
+        
+        <div class="search search_by_category">
+            <div class="title">
+                <h3>Tìm kiếm theo thể loại</h3>
+                <button onclick="searchMangaByCategory(event)">Tìm kiếm</button>
+            </div>
+            <div class="search_area" id="search_category_area">
+                <!-- <div class="category">
+                    <input type="checkbox" id="category_checkbox">
+                    <label for="category_checkbox">manga</label>
+                </div>
+                <div class="category">
+                    <input type="checkbox" id="category_checkbox">
+                    <label for="category_checkbox">manga</label>
+                </div> -->
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer_page"></footer>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/forAll.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/advanceSearch.css">
+    <script src="../javascript/loadHeaderAndFooterAndSearch.js"></script>
+    <script src="../javascript/fetchMangaAndLoadPaginate.js"></script>
+    <script src="../javascript/category.js"></script>
+    <script>
+        function searchMangaByName(event) {
+            let name_input = document.getElementById("input_name");
+            if (!name_input.value || /^\s+$/.test(name_input.value)) {
+                alert("Bạn không được bỏ trống tên");
+            }
+            else {
+                let data = {
+                    name: name_input.value
+                }
+                fetch("http://localhost:3000/search-manga-by-name", {
+                    method: "POST",
+                    body: JSON.stringify(data),
+                    headers: { 'Content-Type': 'application/json' }
+                })
+                    .then((res) => {
+                        return res.json()
+                    })
+                    .then((data) => {
+                        if(data.length == 0)
+                        {
+                            alert("Không thể tìm thấy truyện phù hợp");
+                        }
+                        else{
+                            let searchData = {
+                            search: name_input.value,
+                            mangas: data
+                        }
+                        localStorage.setItem("searchData", JSON.stringify(searchData));
+                        window.location.href = "/frontend/html/listMangaBySearch.html";
+                        }
+                    })
+            }
+        }
+
+
+        function searchMangaByAuthorName(event){
+            let author_name = document.getElementById("input_author_name");
+            if (!author_name.value || /^\s+$/.test(author_name.value)) {
+                alert("Bạn không được bỏ trống tên tác giả");
+            }
+            else{
+                localStorage.setItem("author",JSON.stringify(author_name.value));
+                window.location.href = "/frontend/html/listMangaOfAuthor.html";
+            }
+        }
+        
+        let categories = JSON.parse(localStorage.getItem("categories"));
+        let category_area = document.getElementById("search_category_area");
+        category_area.innerHTML = "";
+        categories.forEach(category => {
+            category_area.innerHTML += `<div class="category">
+                    <input type="checkbox" class="category_checkbox" id="${category.name}">
+                    <label for="${category.name}">${category.name}</label>
+                </div>`
+        });
+
+        
+        function searchMangaByCategory(event){
+            let categories_input = document.getElementsByClassName("category_checkbox");
+            let isChecked = false;
+            let categories ="";
+            for (const category of categories_input) {
+                if (category.checked) {
+                    isChecked = true;
+                    categories += category.id + "_";
+                } 
+            }
+            if(!isChecked)
+            {
+                alert("Bạn phải chọn ít nhất 1 thể loại")
+            }
+            else{
+                categories = categories.slice(0, -1);
+                localStorage.setItem('category', JSON.stringify(categories));
+                window.location.href = "/frontend/html/listMangaByCategory.html";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

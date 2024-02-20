@@ -4,6 +4,7 @@ fetch("http://localhost:3000/category")
     return response.json();
 })
 .then((categories)=>{
+    localStorage.setItem('categories',JSON.stringify(categories));
     let categoryList = document.getElementById("show_real_category");
     categoryList.innerHTML = "";
     categories.forEach(category => {

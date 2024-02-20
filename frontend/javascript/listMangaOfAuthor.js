@@ -4,6 +4,7 @@ let mangaArea = document.getElementById("list_manga_detail");
 let paginateArea = document.getElementById("paginate_show");
 pageTitle.innerHTML += author;
 let queryName = author.replace(/\.|\s/g, "_");
+console.log(queryName);
 fetchMangaAndLoadPaginateRelated(mangaArea, paginateArea, `http://localhost:3000/listMangaOfAuthor?author=${queryName}`)
 
 function catchOnclickPageAndSwitch(event)
