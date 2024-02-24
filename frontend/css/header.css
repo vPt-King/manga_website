@@ -89,6 +89,7 @@
     margin-right: 200px;
     /* flex-grow: 2; */
     width: 660px;
+    margin-left: 40px;
 }
 
 .header.nav .search_box input::placeholder {
@@ -163,6 +164,15 @@
     /* width: 400px; */
 }
 
+.header.nav .login_registers_container a{
+    border-radius: 10px;
+    margin: 10px;
+    background-color: white;
+}
+.header.nav .login_registers_container a strong{
+    color:black;
+}
+
 .header.nav .login_registers_container .login_registers{
     width: 100px;
     text-decoration: none;
@@ -170,9 +180,9 @@
     font-family: 'Poppins',sans-serif;
 }
 
-.header.nav .login_registers_container .login_registers strong{
+/* .header.nav .login_registers_container .login_registers strong{
     color: white;
-}
+} */
 .header.nav .login_registers_container a:hover{
     background-color: white;
 }
@@ -352,6 +362,124 @@
     background-color: #151515;
 }
 
+#login_overlay{
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 3;
+}
+
+.form{
+    height: 390px;
+    width: 450px;
+    display: none;
+    z-index: 5;
+    position: fixed;
+    background-color: white;
+    margin-left: 35%;
+}
+
+.form .content{
+    margin: 20px;
+}
+.form .content .title{
+    text-align: center;
+}
+
+.form .content .title strong{
+    font-size: 25px;
+}
+
+.form .content form div{
+    margin-top: 25px;
+}
+
+.form .content form div label{
+    display: block;
+    width: 100%;
+    color: black;
+    font-size: 20px;
+}
+
+.form .content form div input{
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 6px;
+    text-indent: 10px;
+}
+
+
+
+.form .content form div input::placeholder{
+    text-indent: 10px;
+}
+
+.form .content form .password a{
+    text-decoration: none;
+}
+
+.form .content .button{
+    margin-top: 17px;
+}
+
+.form .content .button button{
+    height: 50px;
+    width: 202px;
+}
+
+/* #account_area{
+    display: none; 
+    white-space: nowrap;
+} */
+
+#show_account{
+    display: none;
+}
+.show_account_infor{
+    display: flex;
+    line-height: 50px;
+    font-size: 16px;
+    color: white;
+    width: 200px;
+    
+}
+.show_account_infor .account{
+    margin: 5px;
+}
+.show_account_infor a{
+    display: flex;
+    width: 200px;
+    height: 20px;
+   
+}
+.show_account_infor a strong{
+    display: block;
+    width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 50px;
+}
+
+.show_account_infor a i{
+   line-height: 34px;
+}
+/* .show_account_infor i{
+    width: 20px;
+}
+.show_account_infor a{
+    width: 50px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+} */
+
 
 /* moble */
 @media only screen and (max-width: 739px) {
@@ -483,6 +611,8 @@
 
     
 }
+
+
 
 /* Ipad */
 @media only screen and (min-width: 740px) and (max-width: 1023px) {

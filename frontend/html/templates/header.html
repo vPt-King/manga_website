@@ -1,12 +1,12 @@
 <header>
     <!-- PC responsive -->
     <nav class="header nav">
-        
+
         <label for="mobile_sidebar_input" class="menu">
             <span class="fa-solid fa-bars"></span>
         </label>
         <div class="icon">Manga<b style="color: red;">VN</b></div>
-        
+
         <!-- <ol class="ol">
             <li class="li"><a href="/frontend/html/homepage.html">List truyện</a></li>
             <li class="li category_list">
@@ -25,33 +25,27 @@
             <li class="li" onclick="redirectToListMangaOfCategory(event)"><a href="#">Oneshot</a></li>
         </ol> -->
 
-    <!-- Search -->
+        <!-- Search -->
         <div class="search_box">
             <input type="text" placeholder="Nhập tên truyện" id="search_input">
             <label id="label_search" class="fa-solid fa-magnifying-glass"></label>
-            <div class="advance_search"><a href="/frontend/html/advanceSearch.html"><strong>Tìm kiếm nâng cao</strong></a></div>
+            <div class="advance_search"><a href="/frontend/html/advanceSearch.html"><strong>Tìm kiếm nâng
+                        cao</strong></a></div>
         </div>
-        <div class="login_registers_container">
-            <a href="#" class="login_registers login"><strong>Đăng nhập</strong></a>
-            <a href="#" class="login_registers register"><strong>Đăng kí</strong></a>
+        <div class="login_registers_container" id="login_registers_area">
+            <a style="cursor: pointer;" id="login_area" class="login_registers login"><strong>Đăng nhập</strong></a>
+            <a style="cursor: pointer;" class="login_registers register"><strong>Đăng kí</strong></a>
         </div>
-    <!-- Search table -->
+
+        <div class="show_account_infor" id="show_account">
+            <a style="cursor: pointer;" class="account account_name"><strong id="nickname">Vũ Phương Thanh
+            </strong>
+            <i class="fa-solid fa-user account account_icon"></i></a>
+           
+        </div>
+
     </nav>
-    <!-- search area -->
-    <!-- <input hidden type="checkbox" id="input_search_icon"> -->
-    <!-- <label for="input_search_icon" class="header search_overlay" id="search_overlay"></label> -->
-    <!-- <div class="search_table">
-        <div class="content_search">
-            <input type="text" placeholder="Nhập tên truyện" id="search_input">
-            <a href="">Tìm kiếm nâng cao</a>
-        </div>
-        <div class="search_result">
-            <ul id="show_search_result">
-                
-            </ul> 
-        </div>
-    </div> -->
-    
+
     <nav class="catalog">
         <ol class="ol">
             <li class="li"><a href="/frontend/html/homepage.html">List truyện</a></li>
@@ -61,7 +55,7 @@
                     <!-- <div class="fake_category"></div> -->
                     <ul id="show_real_category"></ul>
                 </div>
-                
+
             </li>
             <li class="li"><a href="/frontend/html/hotManga.html">Truyện hot</a></li>
             <li class="li"><a href="/frontend/html/author.html">Tác giả</a></li>
@@ -69,13 +63,14 @@
             <li class="li" onclick="redirectToListMangaOfCategory(event)"><a href="#">Manhwa</a></li>
             <li class="li" onclick="redirectToListMangaOfCategory(event)"><a href="#">Full màu</a></li>
             <li class="li" onclick="redirectToListMangaOfCategory(event)"><a href="#">Oneshot</a></li>
-        </ol> 
+            <li class="li" onclick="redirectToListMangaOfCategory(event)"><a href="#">Theo dõi</a></li>
+        </ol>
     </nav>
 
-    
+
     <!-- Moble responsive -->
     <input type="checkbox" hidden name="" id="mobile_sidebar_input">
-    <div ></div>
+    <div></div>
     <label for="mobile_sidebar_input" class="header overlay"></label>
     <nav class="header side_bar">
         <div class="side_bar_logo">
@@ -83,8 +78,9 @@
             <label for="mobile_sidebar_input" class="fa-regular fa-circle-xmark"></label>
         </div>
         <div class="search_sidebar">
-            
-            <input type="text" name="" id="search_input_mobile" onkeypress="handleSearchMobile(event)" placeholder="Nhập tên truyện cần tìm">
+
+            <input type="text" name="" id="search_input_mobile" onkeypress="handleSearchMobile(event)"
+                placeholder="Nhập tên truyện cần tìm">
             <a href="#">Tìm kiếm nâng cao</a>
         </div>
         <br style="display:block; width: 100%; height: 2px; color: black;">
@@ -128,9 +124,93 @@
 
         </ol>
     </nav>
+
+    <!-- login -->
+    <div class="overlay" id="login_overlay"></div>
+    <div class="form login-form">
+        <div class="content">
+            <div class="title"><strong>ĐĂNG NHẬP</strong></div>
+            <form>
+                <div class="email">
+                    <label for="">Email</label>
+                    <input type="text" name="" id="email_input" placeholder="Nhập email">
+                </div>
+                <div class="password">
+                    <label for="">Mật khẩu</label>
+                    <input type="password" name="" id="password_input" placeholder="Nhập mật khẩu">
+                    <a href="" class="forgot_password">Quên mật khẩu ?</a>
+                </div>
+                <div class="button">
+                    <button type="button" id="login_button" onclick="handleLoginButton(event)">Đăng nhập</button>
+                    <button>Hủy</button>
+                </div>
+                <div class="another_option">
+                    <div class="option register_option">
+                        <p>Bạn chưa có tài khoản xin vui lòng <a href="">Đăng kí</a></p>
+                    </div>
+                    <div class="option forgot_password_option"></div>
+                </div>
+            </form>
+        </div>
+    </div>
     <script>
-        function handleSearchMobile(event)
-        {
+        function setCookie(cname, cvalue, exdays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        function getCookie(cname) {
+            let name = cname + "=";
+            let ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function checkCookie() {
+            let user = getCookie("username");
+            if (user != "") {
+                alert("Welcome again " + user);
+            } else {
+                user = prompt("Please enter your name:", "");
+                if (user != "" && user != null) {
+                    setCookie("username", user, 365);
+                }
+            }
+        }
+    </script>
+    <script>
+
+        let nickname = getCookie("nickname");
+        console.log("this is nickname"+nickname)
+        if (nickname != '') {
+            // let account = JSON.parse(localStorage.getItem("account"));
+            let login_register_area = document.getElementById("login_registers_area");
+            login_register_area.style.display = "none";
+            let account_information = document.getElementById("show_account");
+            account_information.style.display = "block";
+            let nickname_area = document.getElementById("nickname");
+            nickname_area.innerHTML = `${nickname}`;
+        }
+
+
+        let login_area = document.getElementById("login_area");
+        login_area.addEventListener("click", (event) => {
+            let overlay = document.getElementById("login_overlay");
+            overlay.style.display = "block";
+            let login_form = document.querySelector(".form.login-form");
+            login_form.style.display = "block"
+        })
+        function handleSearchMobile(event) {
             let searchContent = document.getElementById("search_input_mobile");
             if (event.keyCode === 13) {
                 const name = searchContent.value;
@@ -159,6 +239,30 @@
                         })
                 }
             }
+        }
+
+        function handleLoginButton(event) {
+            let email = document.getElementById("email_input").value;
+            let password = document.getElementById("password_input").value;
+            let data = JSON.stringify({ email: email, password: password });
+            fetch('http://localhost:3000/reader', {
+                method: "POST",
+                body: data,
+                headers: { 'Content-Type': 'application/json' }
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    let isLogin = data.checked;
+                    if (isLogin == 'true') {
+                        console.log(data.account.nickname);
+                        setCookie("nickname", data.account.nickname, 1);
+                        window.location.reload();
+                    }
+                    else {
+                        let mess = data.mess;
+                        alert(mess);
+                    }
+                })
         }
     </script>
 </header>

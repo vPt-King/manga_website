@@ -4,6 +4,7 @@ const port = 3000;
 const dataFile = './data.json';
 const dataCategoryFile = './category.json';
 const dataAuthorFile = './author.json';
+const dataReaderFile = './reader.json';
 const fs = require('fs'); // Import the file system module
 const cors=require("cors");
 const corsOptions ={
@@ -41,6 +42,15 @@ function readCategoryData(){
 function readAuthorData(){
   try {
       const data = fs.readFileSync(dataAuthorFile, 'utf8'); // Read file synchronously
+      return data;
+    } catch (error) {
+      console.error('Error reading data.json:', error);
+    }
+}
+
+function readReaderData(){
+  try {
+      const data = fs.readFileSync(dataReaderFile, 'utf8'); // Read file synchronously
       return data;
     } catch (error) {
       console.error('Error reading data.json:', error);
@@ -93,6 +103,39 @@ app.get('/hotManga', (req, res) => {
 app.get('/author', (req, res) => {
   authors = Object.values(JSON.parse(readAuthorData()));
   res.send(JSON.stringify(authors));
+})
+
+app.post('/reader', (req, res) => {
+  const email = req.body.email;
+  const password = req.body.password;
+  const reader_accounts =  Object.values(JSON.parse(readReaderData()));
+  let checked = false;
+  let reader_account = null;  
+  let mess = 'Tài khoản không tồn tại';
+  reader_accounts.forEach((account)=>{
+    if(account.email == email){
+      mess = "Sai mật khẩu";
+      if(account.password == password){
+        checked = true;
+        reader_account = account;
+      }
+    }
+  })
+  let data = {};
+  if(checked)
+  {
+    data = {
+      checked: "true",
+      account: reader_account
+    }
+  }
+  else{
+    data = {
+      checked: "false",
+      mess:mess
+    }
+  }
+  res.send(JSON.stringify(data));
 })
 
 
