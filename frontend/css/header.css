@@ -381,6 +381,15 @@
     position: fixed;
     background-color: white;
     margin-left: 35%;
+    top: 80px;
+}
+
+.form.register-form{
+    height: 530px;
+}
+
+.form.register-form button{
+    margin-top: 10px;
 }
 
 .form .content{

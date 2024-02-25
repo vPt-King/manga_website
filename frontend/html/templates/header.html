@@ -34,7 +34,7 @@
         </div>
         <div class="login_registers_container" id="login_registers_area">
             <a style="cursor: pointer;" id="login_area" class="login_registers login"><strong>Đăng nhập</strong></a>
-            <a style="cursor: pointer;" class="login_registers register"><strong>Đăng kí</strong></a>
+            <a style="cursor: pointer;" id="register_area" class="login_registers register"><strong>Đăng kí</strong></a>
         </div>
 
         <div class="show_account_infor" id="show_account">
@@ -153,6 +153,38 @@
             </form>
         </div>
     </div>
+
+    <div class="form register-form">
+        <div class="content">
+            <div class="title"><strong>ĐĂNG KÝ
+            </strong></div>
+            <form>
+                <div class="email">
+                    <label for="">Email</label>
+                    <input type="text" name="" id="email_input" placeholder="Nhập email">
+                </div>
+                <div class="nickname">
+                    <label for="">nickname</label>
+                    <input type="text" name="" id="nickname_input" placeholder="Nhập nickname">
+                </div>
+
+                <div class="password">
+                    <label for="">Mật khẩu</label>
+                    <input type="password" name="" id="password_input" placeholder="Nhập mật khẩu">
+                </div>
+                
+                <div class="repassword">
+                    <label for="">Nhập lại mật khẩu</label>
+                    <input type="password" name="" id="repassword_input" placeholder="Nhập lại mật khẩu">
+                </div>
+                <div class="button">
+                    <button type="button" id="register_button" onclick="handleRegisterButton(event)">Đăng ký</button>
+                    <button>Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <script>
         function setCookie(cname, cvalue, exdays) {
             const d = new Date();
@@ -204,11 +236,19 @@
 
 
         let login_area = document.getElementById("login_area");
+        let register_area = document.getElementById("register_area");
         login_area.addEventListener("click", (event) => {
             let overlay = document.getElementById("login_overlay");
             overlay.style.display = "block";
             let login_form = document.querySelector(".form.login-form");
             login_form.style.display = "block"
+        })
+
+        register_area.addEventListener("click",(event)=>{
+            let overlay = document.getElementById("login_overlay");
+            overlay.style.display = "block";
+            let register_form = document.querySelector(".form.register-form");
+            register_form.style.display = "block"
         })
         function handleSearchMobile(event) {
             let searchContent = document.getElementById("search_input_mobile");
@@ -263,6 +303,10 @@
                         alert(mess);
                     }
                 })
+        }
+
+        function handleRegisterButton(event){
+
         }
     </script>
 </header>
