@@ -139,6 +139,41 @@ app.post('/reader', (req, res) => {
 })
 
 
+app.post('/reader_register', (req, res) => {
+  const email = req.body.email;
+  const nickname = req.body.nickname;
+  const password = req.body.password;
+  const reader_accounts =  Object.values(JSON.parse(readReaderData()));
+  let checked = true; 
+  let mess = 'Đăng kí thành công';
+  reader_accounts.forEach((account)=>{
+    if(account.email == email){
+      checked = false;
+      mess="Tài khoản đã tồn tại";
+    }
+  })
+  let data = {};
+  if(checked)
+  {
+    let reader_account = {
+      nickname: nickname,
+      email:email
+    }
+    data = {
+      checked: "true",
+      mess:mess,
+      account: reader_account
+    }
+  }
+  else{
+    data = {
+      checked: "false",
+      mess:mess
+    }
+  }
+  res.send(JSON.stringify(data));
+})
+
 
 app.get('/listMangaOfAuthor', (req, res) => {
   const author = req.query.author;

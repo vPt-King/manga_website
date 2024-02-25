@@ -442,10 +442,6 @@
     width: 202px;
 }
 
-/* #account_area{
-    display: none; 
-    white-space: nowrap;
-} */
 
 #show_account{
     display: none;
@@ -455,7 +451,7 @@
     line-height: 50px;
     font-size: 16px;
     color: white;
-    width: 200px;
+    width: 150px;
     
 }
 .show_account_infor .account{
@@ -463,7 +459,7 @@
 }
 .show_account_infor a{
     display: flex;
-    width: 200px;
+    width: 150px;
     height: 20px;
    
 }
@@ -474,6 +470,8 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     height: 50px;
+    text-align: right;
+    margin-right: 2px;
 }
 
 .show_account_infor a i{

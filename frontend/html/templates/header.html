@@ -161,21 +161,21 @@
             <form>
                 <div class="email">
                     <label for="">Email</label>
-                    <input type="text" name="" id="email_input" placeholder="Nhập email">
+                    <input type="text" name="" id="email_register" placeholder="Nhập email">
                 </div>
                 <div class="nickname">
                     <label for="">nickname</label>
-                    <input type="text" name="" id="nickname_input" placeholder="Nhập nickname">
+                    <input type="text" name="" id="nickname_register" placeholder="Nhập nickname">
                 </div>
 
                 <div class="password">
                     <label for="">Mật khẩu</label>
-                    <input type="password" name="" id="password_input" placeholder="Nhập mật khẩu">
+                    <input type="password" name="" id="password_register" placeholder="Nhập mật khẩu">
                 </div>
                 
                 <div class="repassword">
                     <label for="">Nhập lại mật khẩu</label>
-                    <input type="password" name="" id="repassword_input" placeholder="Nhập lại mật khẩu">
+                    <input type="password" name="" id="repassword_register" placeholder="Nhập lại mật khẩu">
                 </div>
                 <div class="button">
                     <button type="button" id="register_button" onclick="handleRegisterButton(event)">Đăng ký</button>
@@ -221,9 +221,26 @@
         }
     </script>
     <script>
+        function checkIsBlank(infor)
+        {
+            if(!infor ||  /^\s+$/.test(infor))
+            {
+                return false;
+            }
+            return true;
+        }
+        function ValidateEmail(mail) 
+        {
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+            {
+                return (true)
+            }
+            return false;
+        }
+    </script>
+    <script>
 
         let nickname = getCookie("nickname");
-        console.log("this is nickname"+nickname)
         if (nickname != '') {
             // let account = JSON.parse(localStorage.getItem("account"));
             let login_register_area = document.getElementById("login_registers_area");
@@ -284,29 +301,77 @@
         function handleLoginButton(event) {
             let email = document.getElementById("email_input").value;
             let password = document.getElementById("password_input").value;
-            let data = JSON.stringify({ email: email, password: password });
-            fetch('http://localhost:3000/reader', {
-                method: "POST",
-                body: data,
-                headers: { 'Content-Type': 'application/json' }
-            })
-                .then((res) => res.json())
-                .then((data) => {
-                    let isLogin = data.checked;
-                    if (isLogin == 'true') {
-                        console.log(data.account.nickname);
-                        setCookie("nickname", data.account.nickname, 1);
-                        window.location.reload();
-                    }
-                    else {
-                        let mess = data.mess;
-                        alert(mess);
-                    }
+            if( !checkIsBlank(email) || !checkIsBlank(password)){
+                alert("Bạn không được để trống email hoặc mật khẩu");
+            }
+            else if(!ValidateEmail(email)){
+                alert("Bạn phải nhập email");
+            }
+            else{
+                let data = JSON.stringify({ email: email, password: password });
+                fetch('http://localhost:3000/reader', {
+                    method: "POST",
+                    body: data,
+                    headers: { 'Content-Type': 'application/json' }
                 })
+                    .then((res) => res.json())
+                    .then((data) => {
+                        let isLogin = data.checked;
+                        if (isLogin == 'true') {
+                            console.log(data.account.nickname);
+                            setCookie("nickname", data.account.nickname, 1);
+                            window.location.reload();
+                        }
+                        else {
+                            let mess = data.mess;
+                            alert(mess);
+                        }
+                    })
+            }
         }
 
         function handleRegisterButton(event){
-
+            let email = document.getElementById("email_register").value;
+            let nickname = document.getElementById("nickname_register").value;
+            let password = document.getElementById("password_register").value;
+            let repassword = document.getElementById("repassword_register").value;
+            if(!checkIsBlank(email) || !checkIsBlank(nickname) || !checkIsBlank(password) || !checkIsBlank(repassword))
+            {
+                alert("Bạn phải điền đầy đủ thông tin các trường");
+            }
+            else if(!ValidateEmail(email))
+            {
+                alert("Email không đúng định dạng");
+            }
+            else if(password.length <= 6)
+            {
+                alert("Password phải từ 6 kí tự trở lên");
+            }
+            else if(password != repassword)
+            {
+                alert("Mật khẩu nhập lại không trùng khớp");
+            }
+            else{
+                let data = JSON.stringify({ email: email, nickname:nickname, password: password });
+                fetch('http://localhost:3000/reader_register', {
+                    method: "POST",
+                    body: data,
+                    headers: { 'Content-Type': 'application/json' }
+                })
+                    .then((res) => res.json())
+                    .then((data) => {
+                        console.log(data);
+                        let isRegisterSuccess = data.checked;
+                        if(isRegisterSuccess == "false"){
+                            alert("Tài khoản đã tồn tại");
+                        }
+                        else{
+                            alert(data.mess);
+                            setCookie("nickname", data.account.nickname, 1);
+                            window.location.reload();
+                        }
+                    })
+            }
         }
     </script>
 </header>
