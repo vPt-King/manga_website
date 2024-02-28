@@ -1,7 +1,6 @@
 .container .show_manga_detail{
     height: 400px;
     width: 100%;
-    background-color: yellow;
     display: flex;
 }
 
@@ -10,7 +9,7 @@
 }
 
 .container .show_manga_detail .image img{
-    height: 90%;
+    height: 85%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     border-radius: 10px;
 }
@@ -54,3 +53,107 @@
 .container .show_manga_detail .detail_information .detail ul li .category_manga .category:hover{
     text-decoration: underline;
 }
+
+.container .show_manga_detail .detail_information .button-option{
+    margin-top: 2%;
+}
+.container .show_manga_detail .detail_information .button-option .button{
+    height: 40px;
+    width: 160px;
+    border-radius: 5px;
+    font-size: 17px;
+    cursor: pointer;
+    color: white;
+}
+
+.container .show_manga_detail .detail_information .button-option .button i{
+    margin-right: 4px;
+}
+
+.container .show_manga_detail .detail_information .button-option .button.button-1{
+    background-color: #8bc34a;
+}
+
+.container .show_manga_detail .detail_information .button-option .button.button-2{
+    background-color: #FA8072;
+}
+
+.container .show_manga_detail .detail_information .button-option .button.button-3{
+    background-color: #0080FE;
+}
+
+.container .description-manga .introduction{
+    font-size: 20px;
+}
+.container .description-manga .introduction p{
+    display: inline;
+}
+.container .description-manga .content{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.container .list-chapter{
+    margin-top: 50px;
+}
+
+.container .list-chapter .introduction{
+    font-size: 20px;
+}
+.container .list-chapter .introduction p{
+    display: inline;
+}
+
+.container .list-chapter .list-detail{
+    max-height: 500px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+    position: relative;
+    border: 1px solid black;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.container .list-chapter .list-detail ul {
+    list-style: none;
+    margin: 20px;
+    /* position: absolute; */
+    width: 98%;
+    
+}
+.container .list-chapter .list-detail ul li{
+    height: 30px;
+    border-bottom: 1px solid #cccccc;
+}
+
+/* .container .list-chapter .list-detail ul li:hover a{
+    background-color: #BEC3C6;
+} */
+
+
+.container .list-chapter .list-detail ul li a{
+    text-decoration: none;
+    width: 99%;
+    display: block;
+    position: absolute;
+    height: 20px;
+    line-height: 30px;
+    color: black;
+}
+
+
+.container .list-chapter .list-detail ul li a p{
+    display: inline;
+    font-size: 20px;
+}
+
+.container .list-chapter .list-detail ul li a:hover p{
+    color:#0080FE
+}
+.container .list-chapter .list-detail ul li a .date{
+    position: absolute;
+    right: 4%;
+}
+
