@@ -452,7 +452,8 @@
     font-size: 16px;
     color: white;
     width: 150px;
-    
+    position: relative;
+    cursor: pointer;
 }
 .show_account_infor .account{
     margin: 5px;
@@ -477,17 +478,46 @@
 .show_account_infor a i{
    line-height: 34px;
 }
-/* .show_account_infor i{
-    width: 20px;
+
+.show_account_infor .sub_option{
+    position: absolute;
+    background-color: white;
+    top: 55px;
+    right: 0px;
+    width: 200px;
+    color: black;
+    height: 150px;
+    display: none;
 }
-.show_account_infor a{
-    width: 50px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-} */
 
+.show_account_infor:hover .sub_option{
+    display: block;
+}
+.show_account_infor .sub_option ol{
+    list-style: none;
+    line-height: 0px;
+}
 
+.show_account_infor .sub_option ol li{
+    text-align: left;
+    cursor: pointer;
+    height: 50px;
+}
+
+.show_account_infor .sub_option ol li a{
+    text-align: left;
+    cursor: pointer;
+    height: 50px;
+    margin-top: 25px;
+    position: absolute;
+    text-decoration: none;
+    margin-left: 10px;
+    color: black;
+}
+
+.show_account_infor .sub_option ol li:hover{
+    background-color: #f1f1f1
+}
 /* moble */
 @media only screen and (max-width: 739px) {
 
